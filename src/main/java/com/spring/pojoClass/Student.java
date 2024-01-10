@@ -1,8 +1,16 @@
 package com.spring.pojoClass;
 
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component                   //it creates an object of Student i.e student
 public class Student {
+    @Value("Rojan")
     private String name;
+    @Value("2")
     private  int rollNo;
+    @Value("tandi")
     private String address;
 
     public String getName() {
@@ -31,7 +39,7 @@ public class Student {
     }
 
     public void display(){
-        System.out.print(name);
+        System.out.println(name);
         System.out.println(address);
         System.out.println(rollNo);
     }
