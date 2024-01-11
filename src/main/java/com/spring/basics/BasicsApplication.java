@@ -41,7 +41,7 @@ public class BasicsApplication {
 
             //this is for dependency injection using java config file
 			ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-			Car std = (Car) context.getBean("cr");
+			Car std = (Car) context.getBean("car");
 			std.display();
 	}
 

@@ -21,8 +21,8 @@ public class Engine {
     }
 
     //constructor dependency injection
-    public Engine(int engNo, String engType) {
-        this.engNo = engNo;
-        this.engType = engType;
-    }
+//    public Engine(int engNo, String engType) {
+//        this.engNo = engNo;
+//        this.engType = engType;
+//    }
 }

@@ -36,23 +36,43 @@ public class Config {
 //        Car car = new Car();
 //        car.setNo("12");
 //        car.setName("ferrari");
-//        car.setEngine(eng());
+//        car.setEngine(eng());      //manual dependency injection so here comes autowiring
 //        return car;
 //    }
 
 
     //this is for constructor injection using java config file
 
+//    @Bean
+//    public Engine en() {
+//        Engine engi = new Engine(12,"type3");
+//        return engi;
+//    }
+//
+//
+//    @Bean
+//    public Car cr() {
+//        Car care = new Car("i2o","123",en());  //dependency injection using constructor
+//        return care;
+//    }
+
+
+    //using autowiring
+
     @Bean
-    public Engine en() {
-        Engine engi = new Engine(12,"type3");
-        return engi;
+    public Engine eng(){
+        Engine engine = new Engine();
+        engine.setEngNo(1);
+        engine.setEngType("type1");
+        return engine;
     }
 
-
     @Bean
-    public Car cr() {
-        Car care = new Car("i2o","123",en());  //dependency injection using constructor
-        return care;
+    public Car car(){
+        Car car = new Car();
+        car.setNo("12");
+        car.setName("ferrari");
+//        car.setEngine(eng());      //manual dependency injection so here comes autowiring
+        return car;
     }
 }

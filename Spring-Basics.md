@@ -82,6 +82,7 @@ DI is a design pattern used in the spring framework to achieve Inversion Of Cont
 1.It is a Design Pattern.(Design patterns are like pre-tested and proven blueprints for solving common software problem.Ex- Singleton Pattern,DAO Pattern, MVC design pattern.)
 2.It is used to inject the dependency of one object to another.
 3.It is used to achieve loose coupling.
+4.It can be done using either XML config file or Java config file
 4.We can do DI in 2 ways:
 a.Setter Method DI
 -Dependencies are injected into a class through setter methods.
@@ -106,6 +107,12 @@ class Car{
 what happens if we dont use DI?
 we have to hardcode.They will be tightly coupled and create problems in future while updating values.
 Loosely Coupled and Tightly Coupled in figure.
+
+#### Autowiring
+Autowiring is the process of injecting the dependencies automatically using @Autowired annotation.
+It simplifies the code by letting Spring handle object connections for us.
+@Qualifier annotation in spring helps pick the right bean among multiple beans of the same type.it helps spring to know which bean you want injected, resolving ambiguity.
+
 
 
  
