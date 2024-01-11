@@ -27,7 +27,7 @@
    AOP.
    I18N.
 
-   ### Types of Spring Container:
+   ### Types of Spr1ing Container:
    a.Bean Factory(old)
    b.Application Context(new)(interface to start spring container)
 

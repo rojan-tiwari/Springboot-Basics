@@ -1,5 +1,7 @@
 package com.spring.config;
 
+import com.spring.pojoClass.Car;
+import com.spring.pojoClass.Engine;
 import com.spring.pojoClass.Student;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,4 +22,37 @@ public class Config {
     }
 
 
+    //this is for setter methods injection using config file
+//    @Bean
+//    public Engine eng(){
+//        Engine engine = new Engine();
+//        engine.setEngNo(1);
+//        engine.setEngType("type1");
+//        return engine;
+//    }
+//
+//    @Bean
+//    public Car car(){
+//        Car car = new Car();
+//        car.setNo("12");
+//        car.setName("ferrari");
+//        car.setEngine(eng());
+//        return car;
+//    }
+
+
+    //this is for constructor injection using java config file
+
+    @Bean
+    public Engine en() {
+        Engine engi = new Engine(12,"type3");
+        return engi;
+    }
+
+
+    @Bean
+    public Car cr() {
+        Car care = new Car("i2o","123",en());  //dependency injection using constructor
+        return care;
+    }
 }

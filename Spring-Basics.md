@@ -11,7 +11,7 @@ Simplified Database Access.    <br>
 Integration Capabilities.    <br>
 Open Source.    <br>
 
-# SpringContainer
+# SpringContainer or IOC
 A *java bean class* is just a standard.It is a regular java class but it follows some convention:
 a.All properties are private (use getter and setter)
 b.A public no-argument constructor.
@@ -20,7 +20,7 @@ The object created of this javabean class is known as Bean Object.
 
 *POJO(Plain Old Java Object) Class*: A simple Java Class with fields and getters/setters , used for data representation without framework dependencies.
 
-### Responsiblities of spring Container:
+### Responsibilities of spring Container:
 Manage Bean object.
 Manage Bean Life Cycle.
 Dependency Injection.
@@ -84,7 +84,14 @@ DI is a design pattern used in the spring framework to achieve Inversion Of Cont
 3.It is used to achieve loose coupling.
 4.We can do DI in 2 ways:
 a.Setter Method DI
+-Dependencies are injected into a class through setter methods.
+-Setter Method DI is more readable
+-Setter method DI is more Flexible
+
 b.Constructor DI
+-Dependencies are injected into a class through constructor.
+-Setter Method DI is less readable
+-Setter method DI is less Flexible
 
 Example:
 `class Engine{

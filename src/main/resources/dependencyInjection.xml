@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--    <bean class="com.spring.pojoClass.Engine" id="eng">  &lt;!&ndash;this is for setter dependency injection &ndash;&gt;-->
+<!--        <property name="engNo" value="12"/>-->
+<!--        <property name="engType" value="type1"/>-->
+<!--    </bean>-->
+
+<!--    <bean class="com.spring.pojoClass.Car" id="car">-->
+<!--        <property name="name" value="wagon"/>-->
+<!--        <property name="no" value="21"/>-->
+<!--        <property name="engine" ref="eng"/>-->
+<!--    </bean>-->
+
+    <bean class="com.spring.pojoClass.Engine" id="engi">
+        <constructor-arg value="123"/>
+        <constructor-arg value="type2"/>
+    </bean>
+
+    <bean class="com.spring.pojoClass.Car" id="cary">
+        <constructor-arg value="mercedes"/>
+        <constructor-arg value="12"/>
+        <constructor-arg  ref="engi"/>
+    </bean>
+
+
+
+
+
+
+
+</beans>
