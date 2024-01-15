@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 //@ComponentScan("com.spring.pojoClass")    //this is for Annotation based config using java config file.
 public class Config {
 
-    @Bean("stdId1")
+    @Bean
     public Student stu()
     {
          Student st =  new Student();

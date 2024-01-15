@@ -29,14 +29,27 @@ public class Student {
     public void setRollNo(int rollNo) {
         this.rollNo = rollNo;
     }
+    
+    public Student() {
+    	
+    }
 
-    public String getAddress() {
+    public Student(String name, int rollNo, String address) {
+		super();
+		this.name = name;
+		this.rollNo = rollNo;
+		this.address = address;
+	}
+
+	public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
+    
+    
 
     public void display(){
         System.out.println(name);
