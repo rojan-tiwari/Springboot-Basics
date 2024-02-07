@@ -22,7 +22,7 @@ public class Config {
     }
 
 
-    //this is for setter methods injection using config file
+    //this is for setter methods injection using java config file
 //    @Bean
 //    public Engine eng(){
 //        Engine engine = new Engine();
