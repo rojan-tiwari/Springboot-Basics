@@ -200,7 +200,7 @@ These interfaces declare methods for common CRUD operations and queries without 
 These base interfaces already define common methods for saving, updating, deleting, and querying entities.
 
 
-# DAO design patternlets
+# DAO design pattern
 Data Access Object patterns, often known as DAO patterns, are used to divide high level business services from low level data accessing APIs or actions. The members of the Data Access Object Pattern are listed below.
 
 Data Access Object Interface: The Data Access Object Interface specifies the common operations to be carried out on a model object (s).
@@ -256,7 +256,7 @@ The RequestDispatcher interface is used to dispatch the request to another resou
 
 #Http Session Management
 Session is basically used when we want to maintain users identity or if we have to use the same values in different pages then we use session concepts.
-It is present in HttpServeletRequest interface.
+It is present in HttpServletRequest interface.
 In Servlet,
 HttpSession hs = request.getSession();
 //Getting a session and if not available it automatically creates it.
@@ -269,7 +269,7 @@ hs.removeAttributte("key");
 hs.invalidate();
 //to remove whole session
 
-----------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 
 
 ** JSP(Java Server Pages) **
@@ -291,8 +291,19 @@ Are used to provide instructions or directives to the JSP container on bhow to h
 Are used to perform specific actions or operation within the JSP page.Action tag provide a way to interact with java objects, control flow, and perform actions like forwarding, including other resources and manipulating session attributes.
 
 
+-------------------------------------------------------------------------------------------------------------------------------
+
+ **Jackson**
+ Jackson is one of the most used libraries of spring boot which translates JSON data to a Java POJO by itself and vice-versa.
+ Now to exchange data between the front end and the backend, we have to use a common format which is – JavaScript Object Notation (JSON). Now, each time the data is received by the back-end, since we’re using java, java doesn’t understand what’s JSON. It stores data in the form of plain-old-java-objects (POJOs). So, this JSON Data needs to be converted into the form which java understands.  So, if we were to convert data received or send in every request, there would be a lot of extra work and more code to do for programmers. To solve this problem, we’re provided with a library called – Jackson.Now to exchange data between the front end and the backend, we have to use a common format which is – JavaScript Object Notation (JSON). Now, each time the data is received by the back-end, since we’re using java, java doesn’t understand what’s JSON. It stores data in the form of plain-old-java-objects (POJOs). So, this JSON Data needs to be converted into the form which java understands.  So, if we were to convert data received or send in every request, there would be a lot of extra work and more code to do for programmers. To solve this problem, we’re provided with a library called – Jackson.
+ Jackson further uses : ObjectMapper class behind the scene to convert JSON to POJO and POJO to JSON
+ https://www.geeksforgeeks.org/how-jackson-data-binding-works-in-spring-boot/
+jackson annotations : https://www.geeksforgeeks.org/jackson-annotations-for-java-application/
 
 
+
+ **Actuators**
+ https://www.baeldung.com/spring-boot-actuators#understanding-actuator
 
 
 
